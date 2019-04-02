@@ -2,12 +2,12 @@
 // Write a simple closure of your own creation.  Keep it simple!
 function jungle() {
   const apex = "Tiger";
-  console.log('The predator is a large ${apex}');
+  console.log(`The predator is a large ${apex}`);
   debugger;
 
   function hole() {
     const prey = "Mouse";
-    console.log('The ${prey} screams: I am inside the ${apex}');
+    console.log(`The ${prey} screams: I am inside the ${apex}`);
     debugger;
   }
   hole();

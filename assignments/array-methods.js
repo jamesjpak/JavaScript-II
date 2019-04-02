@@ -58,9 +58,9 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
-    for (let i = 0; i < runners.length; i++) {
-        fullName.push(runners[i].first_name + " " + runners[i].last_name)
-    }
+    runners.forEach(function(element) {
+        fullName.push(element.fullName);
+    });
 
 console.log(fullName);
 
@@ -94,7 +94,7 @@ const donationTotal = runners.reduce(function(accumulator, currentValue) {
     return accumulator + currentValue.donation;
 }, 0);
 
-console.log(ticketPriceTotal);
+console.log(ticketPriceTotal)
 console.log(donationTotal);
 
 // ==== Challenge 5: Be Creative ====
