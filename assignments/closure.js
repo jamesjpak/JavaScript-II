@@ -1,5 +1,18 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function jungle() {
+  const apex = "Tiger";
+  console.log('The predator is a large ${apex}');
+  debugger;
+
+  function hole() {
+    const prey = "Mouse";
+    console.log('The ${prey} screams: I am inside the ${apex}');
+    debugger;
+  }
+  hole();
+}
+jungle();
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
