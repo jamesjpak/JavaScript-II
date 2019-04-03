@@ -43,7 +43,7 @@ function last(arr, cb) {
   return cb(arr[arr.length - 1])
 }
 
-last(items, function(lastItem) {
+last(items, function (lastItem) {
   console.log(lastItem)
 });
 
@@ -54,7 +54,7 @@ function sumNums(x, y, cb) {
   return cb(x + y)
 }
 
-sumNums(2, 5, function(sum) {
+sumNums(2, 5, function (sum) {
   console.log(sum)
 });
 
@@ -65,7 +65,7 @@ function multiplyNums(x, y, cb) {
   return cb(x * y)
 }
 
-multiplyNums(5, 7, function(multiply) {
+multiplyNums(5, 7, function (multiply) {
   console.log(multiply)
 });
 
@@ -76,7 +76,7 @@ function contains(item, list, cb) {
   for (let i = 0; i < list.length; i++) {
     if (list[i] === item) {
       return cb(true);
-    } 
+    }
     if (list[i] === item) {
       return cb(false);
     }
@@ -84,21 +84,23 @@ function contains(item, list, cb) {
 
 }
 
-contains('Gum', items, function(confirm) {
+contains('Gum', items, function (confirm) {
   console.log(confirm)
 });
 
 
 /* STRETCH PROBLEM */
+// removeDuplicates removes all duplicate values from the given array.
+//  Pass the duplicate free array to the callback function.
+// Do not mutate the original array.
+function removeDuplicates(array, cb) {
 
-// function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-  // for (let i = 0; i < list.length; i++) {
-     // if (array[i] === array[i]) {
-
-  //  }
- // } 
-
-//} 
+  const duplicatedItems = {};
+  for (let i = 0; i < array.length; i++) {
+    duplicatedItems[arr[i]] = true;
+  }
+  cb(Object.keys(duplicatedItems));
+}
+removeDuplicates(items, function (dupedArray) {
+    console.log(dupedArray);
+  });
