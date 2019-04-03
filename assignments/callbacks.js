@@ -97,7 +97,7 @@ function removeDuplicates(array, cb) {
 
   const duplicatedItems = {};
   for (let i = 0; i < array.length; i++) {
-    duplicatedItems[arr[i]] = true;
+    duplicatedItems[array[i]] = true;
   }
   cb(Object.keys(duplicatedItems));
 }
