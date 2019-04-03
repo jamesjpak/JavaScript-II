@@ -101,6 +101,6 @@ function removeDuplicates(array, cb) {
   }
   cb(Object.keys(duplicatedItems));
 }
-removeDuplicates(items, function (dupedArray) {
-    console.log(dupedArray);
+removeDuplicates(items, function (freedArray) {
+    console.log(freedArray);
   });

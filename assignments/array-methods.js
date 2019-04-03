@@ -59,7 +59,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
     runners.forEach(function(element) {
-        fullName.push(element.fullName);
+        fullName.push(element.first_name + " " + element.last_name);
     });
 
 console.log(fullName);
@@ -101,7 +101,26 @@ console.log(donationTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Sort out the donors who donated $250.00 more and place them in a new array.  The FBI requires a list of wealthy donors. 
+const tooWealthy = runners.filter(function(currentValue) {
+    if (currentValue.donation > 250) {
+        return currentValue.fullName
+    };
+});
+
+console.log(tooWealthy);
 
 // Problem 2
+// Sort out the runners who have the names with more than 20 letters into an array.  
+// This list is needed by the staff for printing identification tags and names with more than 20 letters must be abbreviated.
+
+let longNamed = [];
+    runners.forEach(function(currentValue) {
+       
+    });
+
+
+
+
 
 // Problem 3
